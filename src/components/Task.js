@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 
 function Task({ task }) {
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState();
   const [editedDescription, setEditedDescription] = useState(task.description);
   const dispatch = useDispatch();
 
@@ -22,9 +22,9 @@ function Task({ task }) {
           type="text"
           value={editedDescription}
           onChange={(e) => setEditedDescription(e.target.value)}
-          className="edit-input"
+          className="editInput"
         />
-        <Button onClick={handleEdit}>Save</Button>
+        <Button variant="info" onClick={handleEdit}>Save</Button>
       </div>
     ) : (
       <div className='littleTask'>
@@ -35,7 +35,7 @@ function Task({ task }) {
           onChange={() => dispatch(editTask({ id: task.id, description: task.description, isDone: !task.isDone }))}
           className="checkbox"
         />
-        <Button onClick={() => setIsEditing(true)}>Edit Task</Button>
+        <Button variant="info" onClick={() => setIsEditing(true)}>Edit Task</Button>
       </div>
     )}
   </div>

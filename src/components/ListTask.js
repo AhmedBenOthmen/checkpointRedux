@@ -6,7 +6,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 function ListTask() {
     const tasks = useSelector((state) => state.tasks);
-    const [filter, setFilter] = useState('all');
+    const [filter, setFilter] = useState();
   
     const filteredTasks = tasks.filter((task) => {
       if (filter === 'all') return true;
@@ -21,8 +21,8 @@ function ListTask() {
         <div className='filterButtons'>
         <ButtonGroup size="lg" className="mb-2">
         <Button onClick={() => setFilter('all')}>All</Button>
-        <Button onClick={() => setFilter('done')}>Done</Button>
-        <Button onClick={() => setFilter('notDone')}>Not Done</Button>
+        <Button variant="success" onClick={() => setFilter('done')}>Done</Button>
+        <Button variant="danger" onClick={() => setFilter('notDone')}>Not Done</Button>
       </ButtonGroup>
            
         </div>

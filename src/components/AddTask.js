@@ -31,9 +31,9 @@ function AddTask() {
         placeholder="Add a new task to do"
         value={description}
         onChange={handleInputChange}
-        onKeyPress={handleInputKeyPress}
+        onKeyDown={handleInputKeyPress}
       />
-      <Button onClick={handleAddTask}> Add Task to do</Button>
+      <Button variant="secondary" onClick={handleAddTask}> Add Task to do</Button>
       
     </div>
   );
