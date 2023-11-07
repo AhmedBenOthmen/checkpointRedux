@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+.task {
+  
+  margin: 10px;
+  padding: 10px;
+  
+}
+.edit-input {
+  margin-right: 10px; 
+}
+
+.task-text {
+  margin-right: 10px; 
+}
+
+.checkbox {
+  margin-right: 10px; 
+}
