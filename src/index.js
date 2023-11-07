@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// Render the main application, wrapped in a Redux Provider and within React.StrictMode
 root.render(
   <Provider store={store}>
   <React.StrictMode>
